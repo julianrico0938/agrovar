@@ -13,19 +13,41 @@ const iconMap = {
   invoices: InboxIcon,
 };
 
+<<<<<<< HEAD
 export default async function CardWrapper() {
+=======
+import { fetchCardData } from '@/app/lib/data';
+
+
+export default async function CardWrapper() {
+  const {
+    numberOfInvoices,
+    numberOfCustomers,
+    totalPaidInvoices,
+    totalPendingInvoices,
+  } = await fetchCardData();
+
+>>>>>>> recuperar-codigo
   return (
     <>
       {/* NOTE: Uncomment this code in Chapter 9 */}
 
+<<<<<<< HEAD
       {/* <Card title="Collected" value={totalPaidInvoices} type="collected" />
+=======
+      <Card title="Collected" value={totalPaidInvoices} type="collected" />
+>>>>>>> recuperar-codigo
       <Card title="Pending" value={totalPendingInvoices} type="pending" />
       <Card title="Total Invoices" value={numberOfInvoices} type="invoices" />
       <Card
         title="Total Customers"
         value={numberOfCustomers}
         type="customers"
+<<<<<<< HEAD
       /> */}
+=======
+      />
+>>>>>>> recuperar-codigo
     </>
   );
 }
